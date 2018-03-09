@@ -1,0 +1,15 @@
+<div class="row mt-3">
+  <div class="col-2 p-1 text-center align-self-center"
+    [ngClass]="{
+      'bg-info': item.color === 'blue',
+      'bg-success': item.color === 'green',
+      'bg-warning': item.color === 'yellow',
+      'bg-danger': item.color === 'red',
+      'bounceIn': filterApplied
+    }"
+    [ngStyle]="(filterApplied)?{ 'animation-delay': (150 + gridIdx * 1000 / filteredData.length ) + 'ms' }:{}"
+    *ngFor="let item of filteredData; let gridIdx = index;">
+    <strong>{{item.company}}</strong><br>
+    {{item.country}}
+  </div>
+</div>
