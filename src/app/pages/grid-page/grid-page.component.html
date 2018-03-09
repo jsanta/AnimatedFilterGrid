@@ -6,12 +6,16 @@
     <div class="float-left pr-1"><button type="button" class="btn btn-md"
       (click)="resetFilters()">All</button></div>
     <div class="float-left pr-1"><button type="button" class="btn btn-md btn-info"
+      [ngClass]="{ 'active': filterActive('blue') }"
       (click)="toggleFilter('blue')">Blue</button></div>
     <div class="float-left pr-1"><button type="button" class="btn btn-md btn-success"
+      [ngClass]="{ 'active': filterActive('green') }"
       (click)="toggleFilter('green')">Green</button></div>
     <div class="float-left pr-1"><button type="button" class="btn btn-md btn-warning"
+      [ngClass]="{ 'active': filterActive('yellow') }"
       (click)="toggleFilter('yellow')">Yellow</button></div>
     <div class="float-left pr-1"><button type="button" class="btn btn-md btn-danger"
+      [ngClass]="{ 'active': filterActive('red') }"
       (click)="toggleFilter('red')">Red</button></div>
   </div>
   <div class="form-check mt-3">
